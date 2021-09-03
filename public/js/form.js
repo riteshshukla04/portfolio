@@ -1,5 +1,7 @@
 
 function SEND(){
+var frm = document.getElementsByName('Contact_form')[0];
+frm.disabled
 var name=document.getElementById('input_name').value
 var email=document.getElementById('input_email').value
 var subject=document.getElementById('input_subject').value
@@ -19,7 +21,7 @@ xhr.send(JSON.stringify({
     "message":message
 }));
 alert("Email Sent Successfully");
-var frm = document.getElementsByName('Contact_form')[0];
+
 frm.reset();
 return false;
 }
