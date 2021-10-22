@@ -226,3 +226,8 @@ else {
     fsEnter.innerHTML = "Go Fullscreen";
 }
 });
+
+function scroll(){
+    console.log("Hello")
+}
+
