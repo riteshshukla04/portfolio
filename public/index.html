@@ -18,7 +18,11 @@
 <script>
     // Get the origin and display it
     var origin = window.origin || (window.location.protocol + '//' + window.location.hostname + (window.location.port ? (':' + window.location.port) : ''));
-    document.getElementById('originSpan').textContent = origin;
+    var url = (window.location != window.parent.location)
+    ? document.referrer
+    : document.location.href;
+    document.getElementById('originSpan').textContent = url;
+    
 </script>
 
 </body>
